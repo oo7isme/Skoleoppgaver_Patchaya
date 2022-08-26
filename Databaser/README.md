@@ -3,4 +3,5 @@
 > ELEV OG PROGRAMFAG TABELLER
 
 ![ELEV]
-(
+
+(https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/Screenshot1.png?raw=true)
