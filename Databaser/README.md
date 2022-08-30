@@ -17,7 +17,8 @@
   SELECT * FROM `elev` WHERE kjonn = "J";
 ```
 
-![JENTER]()
+![oppgave2a](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot3.png?raw=true)
+
 
 > B. Hvilke gutter er det i klasse 2?  
 
@@ -25,4 +26,66 @@
   SELECT * FROM `elev` WHERE kjonn = "G" AND Klasse = 2;
 ```
 
-![GUTTER I KLASSE 2]()
+![oppgave2b](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot4.png?raw=true)
+
+> C. Hvor mange jenter er i klasse 2?
+
+```sql
+  SELECT * FROM `elev` WHERE kjonn = "J" AND Klasse = 2;
+```
+
+![oppgave2c](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot5.png?raw=true)
+
+> D. Hvilke elever har Fornavn som starter på bokstaven J?
+
+```sql
+  SELECT * FROM `elev` WHERE Fornavn LIKE "J%";
+```
+![oppgave2d](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot6.png?raw=true)
+
+> E. Hvilke elever starter på bokstaven M og går i klasse 2?
+
+```sql
+  SELECT * FROM `elev` WHERE Fornavn LIKE "M%" AND Klasse = 2;
+```
+
+![oppgave2e](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot7.png?raw=true)
+
+> F. Hvilke elever har hobby ‘Fotball’?
+
+```sql
+  SELECT * FROM `elev` WHERE Hobby = "fotball";
+```
+
+![oppgave2f](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot8.png?raw=true)
+
+### Oppgave 3:
+
+> DATAMASKIN TABELL
+
+![oppgave3](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot9.png?raw=true)
+
+### Oppgave 4:
+
+> Gi HVER ELEV EN DATAMASKIN
+
+![oppgave3](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot10.png?raw=true)
+
+
+### Oppgave 5:
+
+> FREMMEDNØKKEL
+
+### Oppgave 6:
+
+> HVILKE DATAMASKINER HAR MARTIN OG HANNA?
+
+### Oppgave 7:
+
+> SORTERE ELEVENE ETTER FORBOKSTAV
+
+```sql
+SELECT * FROM `elev` ORDER BY Fornavn ASC;
+```
+
+![oppgave7](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot12.png?raw=true)
