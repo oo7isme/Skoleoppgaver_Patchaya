@@ -101,6 +101,13 @@ SELECT * FROM `elev` ORDER BY Fornavn ASC;
 > Lag en query der du bare lister opp klasser med minst to elever. Sorter etter kolonnen
 “klasse” I kronologisk rekkefølge. 
 
+![oppgave8](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot15.png?raw=true)
+
+
+```sql
+SELECT elev.Klasse FROM elev GROUP BY elev.Klasse HAVING COUNT(Klasse) > 1 ORDER BY `elev`.`klasse` ASC;
+```
+
 ### Oppgave 9:
 
 ```sql
