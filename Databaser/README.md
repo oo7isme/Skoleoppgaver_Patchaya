@@ -110,6 +110,8 @@ SELECT elev.Klasse FROM elev GROUP BY elev.Klasse HAVING COUNT(Klasse) > 1 ORDER
 
 ### Oppgave 9:
 
+>Oppdater tabellen med en UPDATE, der du forandrer hobbyene til en av elevene.
+
 ```sql
 UPDATE `elev` SET `Hobby`='Golf' WHERE Fornavn = "Martin";
 ```
@@ -119,6 +121,8 @@ UPDATE `elev` SET `Hobby`='Golf' WHERE Fornavn = "Martin";
 
 ### Oppgave 10:
 
+>Legg til en ny elev med INSERT
+
 ```sql
 INSERT INTO `elev`(`ElevID`, `Fornavn`, `Etternavn`, `Klasse`, `Hobby`, `kjonn`, `Datamaskin`) VALUES ('11','Trygve','Melvold','2','Gaming','G','2');
 ```
@@ -126,6 +130,8 @@ INSERT INTO `elev`(`ElevID`, `Fornavn`, `Etternavn`, `Klasse`, `Hobby`, `kjonn`,
 ![oppgave10](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot14.png?raw=true)
 
 ### Oppgave 11:
+
+>Slett en elev fra klassen (Elev-tabellen) med SQL.
 
 ```sql
 DELETE FROM `elev` WHERE ElevID = 11;
