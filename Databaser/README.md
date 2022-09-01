@@ -80,6 +80,12 @@
 
 > HVILKE DATAMASKINER HAR MARTIN OG HANNA?
 
+```sql
+SELECT elev.ElevID, elev.Fornavn, elev.Etternavn, datamaskin.Model FROM elev INNER JOIN datamaskin ON elev.Datamaskin = datamaskin.DatamaskinID WHERE Fornavn = "Hanna" OR Fornavn = "Martin";
+```
+
+![oppgave6](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot11.png?raw=true)
+
 ### Oppgave 7:
 
 > SORTERE ELEVENE ETTER FORBOKSTAV
@@ -89,3 +95,33 @@ SELECT * FROM `elev` ORDER BY Fornavn ASC;
 ```
 
 ![oppgave7](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot12.png?raw=true)
+
+### Oppgave 8:
+
+> Lag en query der du bare lister opp klasser med minst to elever. Sorter etter kolonnen
+“klasse” I kronologisk rekkefølge. 
+
+### Oppgave 9:
+
+```sql
+UPDATE `elev` SET `Hobby`='Golf' WHERE Fornavn = "Martin";
+```
+
+![oppgave9](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot13.png?raw=true)
+
+
+### Oppgave 10:
+
+```sql
+INSERT INTO `elev`(`ElevID`, `Fornavn`, `Etternavn`, `Klasse`, `Hobby`, `kjonn`, `Datamaskin`) VALUES ('11','Trygve','Melvold','2','Gaming','G','2');
+```
+
+![oppgave10](https://github.com/oo7isme/Skoleoppgaver_Patchaya/blob/main/IMG/screenshot14.png?raw=true)
+
+### Oppgave 11:
+
+```sql
+DELETE FROM `elev` WHERE ElevID = 11;
+```
+
+
