@@ -76,6 +76,8 @@
 
 > FREMMEDNØKKEL
 
+En fremmednøkkel er en kolonne eller kombinasjon av kolonner som brukes til å etablere en kobling mellom dataene i to tabeller for å kontrollere dataene som kan lagres i fremmednøkkeltabellen.
+
 ### Oppgave 6:
 
 > HVILKE DATAMASKINER HAR MARTIN OG HANNA?
