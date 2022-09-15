@@ -1,5 +1,5 @@
 
-# Engelsk-språklig applikasjon
+# applikasjon
 
 ## Behovsanalyse
 
