@@ -1,23 +1,22 @@
 
-# applikasjon
+# Mat applikasjon
 
 ## Behovsanalyse
 
 #### Hvilke utfordringer har brukeren?
 #### Hvilke interesser har brukeren?
 
-Brukeren har vanskelig for å lære seg språk, spesielt engelsk.
-Hun observerer at engelsk er et nyttig språk, som kommer igjen i mange sammenhenger.
-Brukeren liker spill og har konkurranse-instinkt. Motivasjonen øker når man ser fremgang i læringen, i form av poeng og økt mestringsfølelse.
+Brukeren har vanskelig for å følge med ting som skjer rundt seg og 
+Brukeren tenker at det er vanskelig å bestemme seg.
+Brukeren er interressert i matlaging
+Brukeren vil ha en app som kan hjelpe seg til å lage mate på hverdager (food library).
 
 ## Applikasjon
 
 #### Hva er applikasjonen?
 
-Applikasjonen er et TRUE-FALSE spill, som skal gi brukeren ett riktig svar og et feil svar.
-Brukeren starter med 0 poeng og får ett poeng for riktig svar.
-Når alle 10 spørsmålene er stilt, får man en poeng-Score, og gis muligheten til å starte igjen.
-Det skal være to måter å visualisere spørsmålet på:
+Applikasjonen er En mat applikasjon som kan hjelpe brukeren til å velge mat til å lage, siden de har vanskelig å bestemme seg. 
+Appen skal innholder mange matretter, men det ska
 
 1. Et bilde. Hva er dette på engelsk? Deretter svaralternativer.
 2. Fortelle et ord på norsk, og deretter spørre hva det heter på engelsk.
