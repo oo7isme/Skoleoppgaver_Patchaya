@@ -16,17 +16,17 @@ Brukeren vil ha en app som kan hjelpe seg til å lage mate på hverdager (food l
 #### Hva er applikasjonen?
 
 Applikasjonen er En mat applikasjon som kan hjelpe brukeren til å velge mat til å lage, siden de har vanskelig å bestemme seg. 
-Appen skal innholder mange matretter, men det ska
+Appen skal innholder mange matretter, men det skal anbefaler til brukeren hver dag.
 
-1. Et bilde. Hva er dette på engelsk? Deretter svaralternativer.
-2. Fortelle et ord på norsk, og deretter spørre hva det heter på engelsk.
-Her skal det være et tekstfelt, som brukeren skal skrive inn.
+1. appen skal anbefale nye matretter hver eneste dag.
+2. det skal ha oppskrifter og ingredienserne til de matrettene.
+3. det skal også ha bilder.
 
 ## Fremgangsmøte
 
 #### Database
 
-Skal lage en MYSQL - database som lagrer hvor mange poeng spilleren har etter endt spill.
+Skal lage en firebase database - database som lagrer Matretter, bilder og oppkrifter.
 
   Forslag til tabell 1 - Person:
 
