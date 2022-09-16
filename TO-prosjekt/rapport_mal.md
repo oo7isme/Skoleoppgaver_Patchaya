@@ -28,38 +28,42 @@ Appen skal innholder mange matretter, men det skal anbefaler til brukeren hver d
 
 Skal lage en firebase database - database som lagrer Matretter, bilder og oppkrifter.
 
-  Forslag til tabell 1 - Person:
+  Forslag til tabell 1 - mat:
 
-  | BrukerID       | Brukernavn    | Passord |
-  | -------------- |:-------------:| -------:|
-  | 1              | 20.08.1991    | 3       |
+  | MatID          | Matretter     | bilder |
+  | -------------- |:-------------:|-------:|
+  | 1              | taco          |taco.img| 
+  
+  
+  Forslag til tabell 2 - mat2:
 
-  Forslag til tabell 2 - Spill:
+  | MatID          | Oppskrift     | Ingredienser |
+  | -------------- |:-------------:|-------------:|
+  | 1              | Lorem Ipsum   |Lorem Ipsum   | 
 
-  | spillID        | Dato          | Poeng | Person |
-  | -------------- |:-------------:| -----:| -----: |
-  | 1              | 20.08.1991    | 3     | 1      |
+  Forslag til tabell 3 - user:
 
-  Person-kolonnen i Spill - tabellen er en fremmednøkkel som skal fylles
-  på med primærnøkkelen fra Person-tabellen for hvert spill.
-  Person-tabellen skal brukes til innlogging.
+  | UserID         | Username      | email           | password |
+  | -------------- |:-------------:| ---------------:| -------: |
+  | 1              | Patchaya     | patchaya@viken.no| ******** |
+
+  MatID og UserID er primær nøkkel 
+  user tabellen skal brukes til innlogging.
 
 #### HTML, CSS og Javascript
 
-- Spillet trenger en innloggingsside, som kobler opp informasjon fra databasen
-med informasjonen i innloggingsfeltet.
-- Stylingen er "clean", med et stort bakgrunnsbilde på alle slides.
-- Spillet skal ha en velkommen side (start spillet-side) og start spillet-knapp.
-- Når man har svart, så kommer det opp at brukeren har tatt riktig eller feil.
-Spilleren blir "tvunget" med til neste spørsmål.
-- På Hver side skal det stå hvor langt spilleren har kommet i spillet.
-For eksempel 1/10 på først slide, 2/10 på andre slide.
+- Appen trenger en innloggingsside, som kobler opp informasjon fra firebasedatabasen
+med informasjonen i innloggingsfeltet. Her bruker vi JS til å koble opp til firebase
+- Appen kommer til å bruke minst kode så mulig.
+- Skal bruke JS til å lage funksjoner også.
 
-#### Node - backend service.
+#### Firebase - host og database service.
 
 - Trenger database-tilkobling, og kan både hente og oppdatere databasen.
-- Node kan brukes på to måter:
-1. Som backend service og API-calls.
-2. Som webserver.
+firebase :
+1. Som backend service.
+2. Realtimedatabase.
+3. Som webserver. (for å hoste appen)
+4. Authentication.
 
-Dette har jeg ikke bestemt meg for enda.
+
