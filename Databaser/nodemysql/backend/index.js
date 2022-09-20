@@ -1,5 +1,8 @@
 const express = require('express');
+const cors = require('cors');
 const mysql = require('mysql');
+const api = express();
+api.use(cors())
 
 const db = mysql.createConnection({
     host: 'localhost',
