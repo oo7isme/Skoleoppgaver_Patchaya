@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const mysql = require('mysql');
+const path = require('path')
+
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -19,8 +21,8 @@ db.connect(err => {
 })
 
 app.get('/start', (req, res) => {
-    res.send('Goodbye world...')
-})
+    res.send('hei');
+});
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
