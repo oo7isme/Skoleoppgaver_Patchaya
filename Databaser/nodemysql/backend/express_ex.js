@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const mysql = require('mysql');
+const mysql = require('mysql')
 const path = require('path')
+const cors = require('cors')
+app.use(cors())
 
 
 const db = mysql.createConnection({
@@ -20,8 +22,8 @@ db.connect(err => {
 
 })
 
-app.get('/start', (req, res) => {
-    res.send('hei');
+app.get('/hei', (req, res) => {
+    res.send({ Hei: 'Hei' });
 });
 
 app.listen(port, () => {

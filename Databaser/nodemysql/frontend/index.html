@@ -10,12 +10,35 @@
 </head>
 
 <body>
-    <form id="form" action="JavaScript:getRequest()">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <input type="submit" value="Submit">
-    </form>
+    <button onclick="getRequest()">Show database</button>
+
+    <table border="1" id="table">
+        <tr>
+            <th>ElevID</th>
+            <th>Fornavn</th>
+            <th>Etternavn</th>
+            <th>Klasse</th>
+            <th>Hobby</th>
+            <th>Kjonn</th>
+            <th>Datamaskin</th>
+        </tr>
+
+    </table>
+    <table border="1" id="nothing">
+    </table>
+    <template>
+        <tr>
+            <td id="elevid"></td>
+            <td id="fornavn"></td>
+            <td id="etternavn"></td>
+            <td id="klasse"></td>
+            <td id="hobby"></td>
+            <td id="kjon"></td>
+            <td id="datamaskin"></td>
+        </tr>
+      </template>
+
 </body>
-<script src="/frontend/js/index.js"></script>
+<script src="/frontend/JS/index.js"></script>
 
 </html>

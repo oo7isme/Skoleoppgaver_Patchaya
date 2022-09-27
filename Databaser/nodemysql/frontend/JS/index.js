@@ -1,10 +1,8 @@
-var form = document.getElementById(form)
+// var form = document.getElementById(form)
 
 function getRequest() {
-    var inputtext = document.getElementById('fname').value
-    console.log(inputtext)
-
-    fetch('http://localhost:3000/')
+    fetch('http://localhost:3000/hei')
         .then((response) => response.json())
         .then((data) => console.log(data));
 }
+getRequest()
