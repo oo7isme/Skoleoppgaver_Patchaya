@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const mysql = require('mysql')
-const path = require('path')
 const cors = require('cors')
+
 app.use(cors())
 
 
@@ -23,7 +23,13 @@ db.connect(err => {
 })
 
 app.get('/hei', (req, res) => {
-    res.send({ Hei: 'Hei' });
+    let sql = 'SELECT * FROM elev';
+    db.query(sql, (error, results, fields) => {
+        if (error) {
+            return console.error(error.message);
+        }
+        res.json(results);
+    });
 });
 
 app.listen(port, () => {

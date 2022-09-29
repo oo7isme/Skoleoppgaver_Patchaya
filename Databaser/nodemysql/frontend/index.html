@@ -12,7 +12,9 @@
 <body>
     <button onclick="getRequest()">Show database</button>
 
-    <table border="1" id="table">
+    <table border="1" id="box-table">
+    </table>
+    <template id="template-header">
         <tr>
             <th>ElevID</th>
             <th>Fornavn</th>
@@ -22,18 +24,15 @@
             <th>Kjonn</th>
             <th>Datamaskin</th>
         </tr>
-
-    </table>
-    <table border="1" id="nothing">
-    </table>
-    <template>
+      </template>
+    <template id="template">
         <tr>
             <td id="elevid"></td>
             <td id="fornavn"></td>
             <td id="etternavn"></td>
             <td id="klasse"></td>
             <td id="hobby"></td>
-            <td id="kjon"></td>
+            <td id="kjonn"></td>
             <td id="datamaskin"></td>
         </tr>
       </template>
