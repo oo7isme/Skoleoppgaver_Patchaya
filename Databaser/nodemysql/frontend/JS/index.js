@@ -1,6 +1,6 @@
 // var form = document.getElementById(form)
 
-function getRequest() {
+function showData() {
     fetch('http://localhost:3000/hei')
         .then((response) => response.json())
         .then((data) => {
@@ -9,7 +9,6 @@ function getRequest() {
             var clone = template.content.cloneNode(true);
             document.getElementById('box-table').appendChild(clone);
             data.forEach(row => {
-
                 var template = document.getElementById('template');
                 var clone = template.content.cloneNode(true);
                 clone.getElementById('elevid').textContent = row.ElevID;
