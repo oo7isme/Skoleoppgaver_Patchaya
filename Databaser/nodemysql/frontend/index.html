@@ -11,7 +11,7 @@
 
 <body>
     <button onclick="showData()">Show database</button>
-    <button onclick="popUpdateData()">Update Data</button>
+    <button onclick="popup()">Update Data</button>
 
     <table id="box-table">
     </table>
@@ -37,30 +37,32 @@
             <td id="datamaskin"></td>
         </tr>
       </template>
-    <form action="/update-form" method="get">
-        <div class="mb-3">
-            <input type="text" class="form-control" id="ElevID" placeholder="ElevID" />
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="Fornavn" placeholder="Fornavn" />
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="Etternavn" placeholder="Etternavn" />
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="Klasse" placeholder="Klasse" />
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="Hobby" placeholder="Hobby" />
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="Kjonn" placeholder="Kjønn" />
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" id="Datamaskin" placeholder="Datamaskin" />
-        </div>
-        <button onclick="updateData()">Edit</button>
-    </form>
+    <div id="popup">
+        <form action="/update-form" method="get">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="ElevID" placeholder="ElevID" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Fornavn" placeholder="Fornavn" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Etternavn" placeholder="Etternavn" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Klasse" placeholder="Klasse" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Hobby" placeholder="Hobby" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Kjonn" placeholder="Kjønn" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Datamaskin" placeholder="Datamaskin" />
+            </div>
+            <button onclick="updateData()">Edit</button>
+        </form>
+    </div>
 
 
 </body>

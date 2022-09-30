@@ -22,4 +22,15 @@ function showData() {
             })
         })
 }
-// getRequest()
+
+function popup() {
+    var popupbox = document.getElementById('popup')
+    var table = document.getElementById('box-table')
+    if (popupbox.style.display === "none") {
+        popupbox.style.display = "block";
+        table.style.display = "none";
+    } else {
+        popupbox.style.display = "none";
+        table.style.display = "block";
+    }
+}

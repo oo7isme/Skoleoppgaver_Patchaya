@@ -32,18 +32,6 @@ app.get('/hei', (req, res) => {
     });
 });
 
-app.post('/update-form', (req, res) => {
-    var ElevID = req.body.ElevID
-
-    let sql = 'UPDATE elev SET (ElevID, Fornavn, Etternavn, Klasse, Hobby, kjonn, Datamaskin ) VALUES   ("${ElevID}", "${Fornavn}", "${Etternavn}, "${Klasse}","${Hobby}","${Kjonn}","${Datamaskin}", NOW())'
-    let query = db.query(sql, post, err => {
-        if (err) {
-            throw err;
-        }
-        res.send('Hobby Updated')
-    })
-})
-
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
