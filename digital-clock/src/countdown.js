@@ -33,7 +33,7 @@ function Countdown() {
       {isExploding && <ConfettiExplosion />}
       <button
         onClick={() => {
-          setCountdown(10);
+          setCountdown(5);
           firstFunc();
         }}
       >
