@@ -1,29 +1,14 @@
-import "../CSS/content.css";
-
-function Content() {
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../CSS/Home.css";
+import { useNavigate } from "react-router-dom";
+export default function Home() {
+  const nav = useNavigate();
   return (
     <div className="main-content">
-      <div className="featureBox">
-        <p>Services</p>
-      </div>
-      {/* <div className="days">
-        <div id="mon" className="day">
-          Mon
-        </div>
-        <div id="tue" className="day">
-          Tirs
-        </div>
-        <div id="wed" className="day">
-          Ons
-        </div>
-        <div id="thu" className="day">
-          Tors
-        </div>
-        <div id="fri" className="day">
-          Fre
-        </div>
-      </div> */}
+      <Header />
       <div className="services">
+        <h1>Services</h1>
         <div id="skinFade" className="service">
           <p>Skin Fade</p>
         </div>
@@ -40,8 +25,9 @@ function Content() {
           <p>Beard Trimming</p>
         </div>
       </div>
+      <div className="footer">
+        <button onClick={() => nav("/bestill")}>BOOK HERE</button>
+      </div>
     </div>
   );
 }
-
-export default Content;

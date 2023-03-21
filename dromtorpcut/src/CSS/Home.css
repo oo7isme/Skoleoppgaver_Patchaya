@@ -1,0 +1,16 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  margin-left: 10%;
+  height: 80%;
+  gap: 5%;
+}
+.service p {
+  font-size: 1.5rem;
+  color: #112d4e;
+}
+h1 {
+  text-align: center;
+  color: #112d4e;
+}

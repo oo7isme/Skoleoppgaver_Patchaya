@@ -26,5 +26,18 @@
 .services {
   display: flex;
   flex-direction: column;
-  gap: 10%;
+  align-items: flex-start;
+  margin-left: 10%;
+  height: 100%;
+  gap: 5%;
+}
+.service p {
+  font-size: 1.5rem;
+  color: #112d4e;
+}
+.service {
+  display: flex;
+}
+.desc {
+  font-size: 1rem;
 }

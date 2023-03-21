@@ -1,7 +1,7 @@
 import "../CSS/header.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
-function header() {
+export default function Header() {
   return (
     <div className="header">
       <p>DrømtorpCut</p>
@@ -9,5 +9,3 @@ function header() {
     </div>
   );
 }
-
-export default header;
