@@ -14,8 +14,8 @@ code {
 }
 
 .main-container {
-  height: 100svh;
-  width: 100svw;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -25,16 +25,4 @@ code {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-}
-.services {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 10%;
-  height: 100%;
-  gap: 5%;
-}
-.service p {
-  font-size: 1.5rem;
-  color: #112d4e;
 }

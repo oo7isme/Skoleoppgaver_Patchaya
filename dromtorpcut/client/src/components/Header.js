@@ -5,7 +5,6 @@ export default function Header() {
   return (
     <div className="header">
       <p>DrømtorpCut</p>
-      <MenuIcon className="menu" color="white" fontSize="large" />
     </div>
   );
 }

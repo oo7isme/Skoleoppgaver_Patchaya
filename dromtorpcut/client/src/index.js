@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./CSS/index.css";
 import Home from "./routes/Home";
 import Order from "./routes/Order";
+import Info from "./routes/Info";
+import Summary from "./routes/Summary";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -11,12 +14,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/bestill",
+    path: "/step1",
     element: <Order />,
   },
   {
-    path: "/login",
-    element: <Order />,
+    path: "/step2",
+    element: <Info />,
+  },
+  {
+    path: "/step3",
+    element: <Summary />,
   },
 ]);
 
