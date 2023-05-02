@@ -24,7 +24,10 @@ const corsOptions = {
     if (!origin) {
       callback(null, true);
     } else {
-      const allowedOrigins = ["http://localhost:3000"];
+      const allowedOrigins = [
+        "http://localhost:3000",
+        "https://dromtorp-cut.vercel.app",
+      ];
       const isAllowed = allowedOrigins.includes(origin);
       callback(isAllowed ? null : new Error("Origin not allowed"), isAllowed);
     }

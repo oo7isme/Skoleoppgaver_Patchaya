@@ -25,7 +25,7 @@ export default function ContactUs() {
       email: form.current[2].value,
       date: form.current[3].value,
     };
-    axios.post("http://bolerasen.xyz/registerOrder", {
+    axios.post("https://bolerasen.xyz/registerOrder", {
       cut: data.cut,
       name: data.name,
       email: data.email,
