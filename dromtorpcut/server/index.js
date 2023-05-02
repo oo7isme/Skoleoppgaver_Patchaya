@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 const app = express();
 const db =
@@ -38,23 +40,30 @@ app.use(cors(corsOptions));
 
 app.post("/registerOrder", (req, res) => {
   console.log(req.body);
-  const orderSchema = new Order({
-    cut: req.body.cut,
-    name: req.body.name,
-    email: req.body.email,
-    date: req.body.date,
-  });
-
-  orderSchema
-    .save()
-    .then((savedData) => {
-      console.log("Saved data:", savedData);
-      res.send("Data received and saved successfully");
-    })
-    .catch((err) => {
+  bcrypt.hash(req.body.cut, saltRounds, function (err, hash) {
+    if (err) {
       console.error(err);
-      res.status(500).send("Error saving data");
-    });
+      res.status(500).send("Error hashing data");
+    } else {
+      const orderSchema = new Order({
+        cut: hash,
+        name: req.body.name,
+        email: hash,
+        date: req.body.date,
+      });
+
+      orderSchema
+        .save()
+        .then((savedData) => {
+          console.log("Saved data:", savedData);
+          res.send("Data received and saved successfully");
+        })
+        .catch((err) => {
+          console.error(err);
+          res.status(500).send("Error saving data");
+        });
+    }
+  });
 });
 
 app.get("/checkDateAvailability/:date", async (req, res) => {
@@ -70,3 +79,30 @@ app.get("/checkDateAvailability/:date", async (req, res) => {
 app.listen(port, () => {
   console.log(`Backend server listening on port ${port}`);
 });
+
+// to check if cut matches
+
+// app.post('/checkCut', (req, res) => {
+//   const inputCut = req.body.cut;
+//   Order.findOne({ name: req.body.name }, function(err, order) {
+//     if (err) {
+//       console.error(err);
+//       res.status(500).send('Error finding order');
+//     } else if (order) {
+//       bcrypt.compare(inputCut, order.cut, function(err, result) {
+//         if (err) {
+//           console.error(err);
+//           res.status(500).send('Error comparing data');
+//         } else {
+//           if (result) {
+//             res.send('Cut matches');
+//           } else {
+//             res.send('Cut does not match');
+//           }
+//         }
+//       });
+//     } else {
+//       res.send('Order not found');
+//     }
+//   });
+// });

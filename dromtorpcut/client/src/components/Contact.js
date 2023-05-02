@@ -3,35 +3,26 @@ import emailjs, { sendForm } from "@emailjs/browser";
 import axios from "axios";
 import "../CSS/Contact.css";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function ContactUs() {
   const nav = useNavigate();
   const form = useRef();
+  const location = useLocation();
+  const { Haircut } = location.state;
   const checkInput = () => {
     if (
-      form.current[1].value == "" ||
-      form.current[2].value == "" ||
-      form.current[3].value == ""
+      form.current[0].value === "" ||
+      form.current[1].value === "" ||
+      form.current[2].value === "" ||
+      form.current[3].value === ""
     ) {
       alert("Fill in your informations");
     } else {
       checkDate();
     }
   };
-  const registerOrder = () => {
-    const data = {
-      cut: form.current[0].value,
-      name: form.current[1].value,
-      email: form.current[2].value,
-      date: form.current[3].value,
-    };
-    axios.post("https://bolerasen.xyz/registerOrder", {
-      cut: data.cut,
-      name: data.name,
-      email: data.email,
-      date: data.date,
-    });
-  };
+
   const checkDate = () => {
     const date = new Date(form.current[3].value);
     const dayOfWeek = date.getUTCDay();
@@ -60,29 +51,51 @@ export default function ContactUs() {
         });
     }
   };
+  const registerOrder = () => {
+    const data = {
+      cut: form.current[0].value,
+      name: form.current[1].value,
+      email: form.current[2].value,
+      date: form.current[3].value,
+    };
+    axios.post("https://bolerasen.xyz/registerOrder", {
+      cut: data.cut,
+      name: data.name,
+      email: data.email,
+      date: data.date,
+    });
+  };
   const sendEmail = () => {
-    emailjs
-      .sendForm(
-        "service_qek1hs9",
-        "template_cg6my8l",
-        form.current,
-        "2G7H1tlw4bN8adSR-"
-      )
-      .then(
-        (result) => {
-          nav("/step3");
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    const data = {
+      cut: form.current[0].value,
+      name: form.current[1].value,
+      email: form.current[2].value,
+      date: form.current[3].value,
+    };
+    nav("/step3", { state: { data } });
+    // emailjs
+    //   .sendForm(
+    //     "service_qek1hs9",
+    //     "template_cg6my8l",
+    //     form.current,
+    //     "2G7H1tlw4bN8adSR-"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       nav("/step3", { state: { data } });
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (
     <form ref={form}>
       <label>Cut</label>
       <select id="input-cut" name="cut">
+        <option value={Haircut}>{Haircut}</option>
         <option value="Skin fade">Skin Fade</option>
         <option value="Men's Haircut">Men's Haircut</option>
         <option value="Combo Deluxe">Combo Deluxe</option>

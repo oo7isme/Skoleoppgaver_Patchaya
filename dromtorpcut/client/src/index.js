@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./CSS/index.css";
+import "./CSS/Index.css";
 import Home from "./routes/Home";
 import Order from "./routes/Order";
 import Info from "./routes/Info";

@@ -4,10 +4,10 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import "../CSS/Progress.css";
-const steps = ["Services", "Order and confirm", "Summary"];
 
 export default function HorizontalLabelPositionBelowStepper(props) {
   const activeStep = props.pageStep;
+  const steps = ["Services", "Order and confirm", "Summary"];
   return (
     <Box sx={{ width: "100%", top: "15%", position: "fixed" }}>
       <Stepper activeStep={activeStep} alternativeLabel>

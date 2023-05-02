@@ -8,7 +8,6 @@ import HorizontalLabelPositionBelowStepper from "../components/Progress";
 export default function Info() {
   const nav = useNavigate();
   const form = useRef();
-
   return (
     <div className="main-content">
       <Header />
