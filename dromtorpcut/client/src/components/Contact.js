@@ -72,23 +72,22 @@ export default function ContactUs() {
       email: form.current[2].value,
       date: form.current[3].value,
     };
-    nav("/step3", { state: { data } });
-    // emailjs
-    //   .sendForm(
-    //     "service_qek1hs9",
-    //     "template_cg6my8l",
-    //     form.current,
-    //     "2G7H1tlw4bN8adSR-"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       nav("/step3", { state: { data } });
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_qek1hs9",
+        "template_cg6my8l",
+        form.current,
+        "2G7H1tlw4bN8adSR-"
+      )
+      .then(
+        (result) => {
+          nav("/step3", { state: { data } });
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
