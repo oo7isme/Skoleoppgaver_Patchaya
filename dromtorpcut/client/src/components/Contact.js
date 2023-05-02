@@ -25,7 +25,7 @@ export default function ContactUs() {
       email: form.current[2].value,
       date: form.current[3].value,
     };
-    axios.post("http://armadillo.pink:25584/registerOrder", {
+    axios.post("http://bolerasen.xyz/registerOrder", {
       cut: data.cut,
       name: data.name,
       email: data.email,
@@ -46,7 +46,7 @@ export default function ContactUs() {
     } else {
       axios
         .get(
-          `http://armadillo.pink:25584/checkDateAvailability/${date.toISOString()}`
+          `https://bolerasen.xyz/checkDateAvailability/${date.toISOString()}`
         )
         .then((res) => {
           if (res.data === "Date is not available") {
@@ -55,7 +55,7 @@ export default function ContactUs() {
             );
           } else {
             registerOrder();
-            // sendEmail();
+            sendEmail();
           }
         });
     }
