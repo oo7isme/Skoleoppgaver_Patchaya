@@ -4,6 +4,7 @@ import axios from "axios";
 import "../CSS/Contact.css";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function ContactUs() {
   const nav = useNavigate();
@@ -29,7 +30,7 @@ export default function ContactUs() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     if (date < today) {
-      alert("The selected date is in the past. Please choose a future date.");
+      toast.error("This date is unavailable!");
     } else if (dayOfWeek === 6 || dayOfWeek === 0) {
       alert(
         "The selected date is a Saturday or Sunday. Please choose a weekday."

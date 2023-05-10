@@ -5,6 +5,7 @@ import Home from "./routes/Home";
 import Order from "./routes/Order";
 import Info from "./routes/Info";
 import Summary from "./routes/Summary";
+import { Toaster } from "react-hot-toast";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -32,6 +33,7 @@ root.render(
   <React.StrictMode>
     <div className="main-container">
       <RouterProvider router={router} />
+      <Toaster />
     </div>
   </React.StrictMode>
 );
